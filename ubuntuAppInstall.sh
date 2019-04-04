@@ -8,7 +8,7 @@ echo "Installing Terminator"
 # install terminator
 sudo add-apt-repository ppa:gnome-terminator
 sudo apt update
-sudo apt install terminator
+sudo apt install -y terminator
 
 echo "Installing Google Chrome"
 # install google chrome
