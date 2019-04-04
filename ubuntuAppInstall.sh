@@ -17,14 +17,14 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 echo "Installing Vim"
 # install full version of vim
-sudo apt install vim
+sudo apt install -y vim
 
 echo "Installing VS Code"
 # install vscode
 sudo apt install software-properties-common apt-transport-https wget
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt install code
+sudo apt install -y code
 
 echo "Installing NVM"
 # install nvm for node.js and npm
@@ -40,7 +40,7 @@ echo "Installing Spotify"
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt update
-sudo apt install spotify-client
+sudo apt install -y spotify-client
 
 echo "#####################"
 echo "Installation Complete"
