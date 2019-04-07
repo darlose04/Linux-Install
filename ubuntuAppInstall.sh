@@ -10,6 +10,9 @@ sudo add-apt-repository ppa:gnome-terminator
 sudo apt update
 sudo apt install -y terminator
 
+echo "Installing neofetch"
+sudo apt install -y  neofetch
+
 echo "Installing Google Chrome"
 # install google chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -21,14 +24,14 @@ sudo apt install -y vim
 
 echo "Installing VS Code"
 # install vscode
-sudo apt install software-properties-common apt-transport-https wget
+sudo apt install -y software-properties-common apt-transport-https wget
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt install -y code
 
 echo "Installing NVM"
 # install nvm for node.js and npm
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 nvm install 10.15.3
 
 echo "Installing nodemon"
